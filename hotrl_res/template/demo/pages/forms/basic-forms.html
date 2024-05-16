@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Employee</title>
+    <!-- plugins:css -->
+    <link
+      rel="stylesheet"
+      href="../../../assets/vendors/mdi/css/materialdesignicons.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../../../assets/vendors/css/vendor.bundle.base.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <!-- endinject -->
+    <!-- Plugin css for this page -->
+    <!-- End plugin css for this page -->
+    <!-- Layout styles -->
+    <link rel="stylesheet" href="../../../assets/css/demo/style.css" />
+    <!-- End layout styles -->
+    <link rel="shortcut icon" href="../../../assets/images/favicon.png" />
+  </head>
+  <body>
+    <script src="../assets/js/preloader.js"></script>
+    <div class="body-wrapper">
+      <!-- partial:../../partials/_sidebar.html -->
+      <aside class="mdc-drawer mdc-drawer--dismissible mdc-drawer--open">
+        <div class="mdc-drawer__content">
+          <div class="user-info">
+            <p class="name">Bastard Robin</p>
+            <p class="email">nouse@grind.us</p>
+          </div>
+          <div class="mdc-list-group">
+            <nav class="mdc-list mdc-drawer-menu">
+              <div class="mdc-list-item mdc-drawer-item">
+                <a class="mdc-drawer-link" href="../../index.html">
+                  <i
+                    class="material-icons mdc-list-item__start-detail mdc-drawer-item-icon"
+                    aria-hidden="true"
+                    >home</i
+                  >
+                  Dashboard
+                </a>
+              </div>
+              <div class="mdc-list-item mdc-drawer-item">
+                <a
+                  class="mdc-drawer-link"
+                  href="../../pages/forms/basic-forms.html"
+                >
+                  <i
+                    class="material-icons mdc-list-item__start-detail mdc-drawer-item-icon"
+                    aria-hidden="true"
+                    >track_changes</i
+                  >
+                  Employee
+                </a>
+              </div>
+              <div class="mdc-list-item mdc-drawer-item">
+                <a
+                  class="mdc-expansion-panel-link"
+                  href="#"
+                  data-toggle="expansionPanel"
+                  data-target="ui-sub-menu"
+                >
+                  <i
+                    class="material-icons mdc-list-item__start-detail mdc-drawer-item-icon"
+                    aria-hidden="true"
+                    >dashboard</i
+                  >
+                  Booking
+                  <i class="mdc-drawer-arrow material-icons">chevron_right</i>
+                </a>
+                <div class="mdc-expansion-panel" id="ui-sub-menu">
+                  <nav class="mdc-list mdc-drawer-submenu">
+                    <div class="mdc-list-item mdc-drawer-item">
+                      <a
+                        class="mdc-drawer-link"
+                        href="../../../../rooms-single.html"
+                      >
+                        Room
+                      </a>
+                    </div>
+                    <div class="mdc-list-item mdc-drawer-item">
+                      <a
+                        class="mdc-drawer-link"
+                        href="../../../../restaurant.html"
+                      >
+                        Restraunt
+                      </a>
+                    </div>
+                  </nav>
+                </div>
+              </div>
+              <div class="mdc-list-item mdc-drawer-item">
+                <a
+                  class="mdc-drawer-link"
+                  href="#"
+                >
+                  <i
+                    class="material-icons mdc-list-item__start-detail mdc-drawer-item-icon"
+                    aria-hidden="true"
+                    >grid_on</i
+                  >
+                  Tables
+                </a>
+              </div>
+            </nav>
+          </div>
+          <div class="profile-actions">
+            <a href="javascript:;">Settings</a>
+            <span class="divider"></span>
+            <a href="../samples/login.html">Logout</a>
+          </div>
+        </div>
+      </aside>
+      <!-- partial -->
+
+      <div class="main-wrapper mdc-drawer-app-content">
+        <!-- partial:../../partials/_navbar.html -->
+        <header class="mdc-top-app-bar">
+          <div class="mdc-top-app-bar__row">
+            <div
+              class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start"
+            >
+              <button
+                class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button sidebar-toggler"
+              >
+                menu
+              </button>
+              <span class="mdc-top-app-bar__title">Greetings Robin</span>
+              <div
+                class="mdc-text-field mdc-text-field--outlined mdc-text-field--with-leading-icon search-text-field d-none d-md-flex"
+              >
+                <i class="material-icons mdc-text-field__icon">search</i>
+                <input
+                  class="mdc-text-field__input"
+                  id="text-field-hero-input"
+                />
+                <div class="mdc-notched-outline">
+                  <div class="mdc-notched-outline__leading"></div>
+                  <div class="mdc-notched-outline__notch">
+                    <label
+                      for="text-field-hero-input"
+                      class="mdc-floating-label"
+                      >Search..</label
+                    >
+                  </div>
+                  <div class="mdc-notched-outline__trailing"></div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end mdc-top-app-bar__section-right"
+            >
+              <div class="menu-button-container menu-profile d-none d-md-block">
+                <button class="mdc-button mdc-menu-button">
+                  <span class="d-flex align-items-center">
+                    <span class="figure">
+                      <img
+                        src="../../../assets/images/faces/face1.jpg"
+                        alt="user"
+                        class="user"
+                      />
+                    </span>
+                    <span class="user-name">Bastard Robin</span>
+                  </span>
+                </button>
+                <div class="mdc-menu mdc-menu-surface" tabindex="-1">
+                  <ul
+                    class="mdc-list"
+                    role="menu"
+                    aria-hidden="true"
+                    aria-orientation="vertical"
+                  >
+                    <li class="mdc-list-item" role="menuitem">
+                      <div class="item-thumbnail item-thumbnail-icon-only">
+                        <i
+                          class="mdi mdi-account-edit-outline text-primary"
+                        ></i>
+                      </div>
+                      <div
+                        class="item-content d-flex align-items-start flex-column justify-content-center"
+                      >
+                        <h6 class="item-subject font-weight-normal">
+                          Edit profile
+                        </h6>
+                      </div>
+                    </li>
+                    <li class="mdc-list-item" role="menuitem">
+                      <div class="item-thumbnail item-thumbnail-icon-only">
+                        <i class="mdi mdi-settings-outline text-primary"></i>
+                      </div>
+                      <div
+                        class="item-content d-flex align-items-start flex-column justify-content-center"
+                      >
+                        <h6 class="item-subject font-weight-normal">Logout</h6>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="divider d-none d-md-block"></div>
+              <div class="menu-button-container d-none d-md-block">
+                <button class="mdc-button mdc-menu-button">
+                  <i class="mdi mdi-settings"></i>
+                </button>
+                <div class="mdc-menu mdc-menu-surface" tabindex="-1">
+                  <ul
+                    class="mdc-list"
+                    role="menu"
+                    aria-hidden="true"
+                    aria-orientation="vertical"
+                  >
+                    <li class="mdc-list-item" role="menuitem">
+                      <div class="item-thumbnail item-thumbnail-icon-only">
+                        <i
+                          class="mdi mdi-alert-circle-outline text-primary"
+                        ></i>
+                      </div>
+                      <div
+                        class="item-content d-flex align-items-start flex-column justify-content-center"
+                      >
+                        <h6 class="item-subject font-weight-normal">
+                          Settings
+                        </h6>
+                      </div>
+                    </li>
+                    <li class="mdc-list-item" role="menuitem">
+                      <div class="item-thumbnail item-thumbnail-icon-only">
+                        <i class="mdi mdi-progress-download text-primary"></i>
+                      </div>
+                      <div
+                        class="item-content d-flex align-items-start flex-column justify-content-center"
+                      >
+                        <h6 class="item-subject font-weight-normal">Update</h6>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="menu-button-container">
+                <button class="mdc-button mdc-menu-button">
+                  <i class="mdi mdi-bell"></i>
+                </button>
+                <div class="mdc-menu mdc-menu-surface" tabindex="-1">
+                  <h6 class="title">
+                    <i class="mdi mdi-bell-outline mr-2 tx-16"></i>
+                    Notifications
+                  </h6>
+                  <ul
+                    class="mdc-list"
+                    role="menu"
+                    aria-hidden="true"
+                    aria-orientation="vertical"
+                  >
+                    <li class="mdc-list-item" role="menuitem">
+                      <div class="item-thumbnail item-thumbnail-icon">
+                        <i class="mdi mdi-email-outline"></i>
+                      </div>
+                      <div
+                        class="item-content d-flex align-items-start flex-column justify-content-center"
+                      >
+                        <h6 class="item-subject font-weight-normal">
+                          You received a new message
+                        </h6>
+                        <small class="text-muted"> 6 min ago </small>
+                      </div>
+                    </li>
+                    <li class="mdc-list-item" role="menuitem">
+                      <div class="item-thumbnail item-thumbnail-icon">
+                        <i class="mdi mdi-account-outline"></i>
+                      </div>
+                      <div
+                        class="item-content d-flex align-items-start flex-column justify-content-center"
+                      >
+                        <h6 class="item-subject font-weight-normal">
+                          New user registered
+                        </h6>
+                        <small class="text-muted"> 15 min ago </small>
+                      </div>
+                    </li>
+                    <li class="mdc-list-item" role="menuitem">
+                      <div class="item-thumbnail item-thumbnail-icon">
+                        <i class="mdi mdi-alert-circle-outline"></i>
+                      </div>
+                      <div
+                        class="item-content d-flex align-items-start flex-column justify-content-center"
+                      >
+                        <h6 class="item-subject font-weight-normal">
+                          System Alert
+                        </h6>
+                        <small class="text-muted"> 2 days ago </small>
+                      </div>
+                    </li>
+                    <li class="mdc-list-item" role="menuitem">
+                      <div class="item-thumbnail item-thumbnail-icon">
+                        <i class="mdi mdi-update"></i>
+                      </div>
+                      <div
+                        class="item-content d-flex align-items-start flex-column justify-content-center"
+                      >
+                        <h6 class="item-subject font-weight-normal">
+                          You have a new update
+                        </h6>
+                        <small class="text-muted"> 3 days ago </small>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="menu-button-container">
+                <button class="mdc-button mdc-menu-button">
+                  <i class="mdi mdi-email"></i>
+                  <span class="count-indicator">
+                    <span class="count">3</span>
+                  </span>
+                </button>
+                <div class="mdc-menu mdc-menu-surface" tabindex="-1">
+                  <h6 class="title">
+                    <i class="mdi mdi-email-outline mr-2 tx-16"></i> Messages
+                  </h6>
+                  <ul
+                    class="mdc-list"
+                    role="menu"
+                    aria-hidden="true"
+                    aria-orientation="vertical"
+                  >
+                    <li class="mdc-list-item" role="menuitem">
+                      <div class="item-thumbnail">
+                        <img
+                          src="../../../assets/images/faces/face4.jpg"
+                          alt="user"
+                        />
+                      </div>
+                      <div
+                        class="item-content d-flex align-items-start flex-column justify-content-center"
+                      >
+                        <h6 class="item-subject font-weight-normal">
+                          Mark send you a message
+                        </h6>
+                        <small class="text-muted"> 1 Minutes ago </small>
+                      </div>
+                    </li>
+                    <li class="mdc-list-item" role="menuitem">
+                      <div class="item-thumbnail">
+                        <img
+                          src="../../../assets/images/faces/face2.jpg"
+                          alt="user"
+                        />
+                      </div>
+                      <div
+                        class="item-content d-flex align-items-start flex-column justify-content-center"
+                      >
+                        <h6 class="item-subject font-weight-normal">
+                          Cregh send you a message
+                        </h6>
+                        <small class="text-muted"> 15 Minutes ago </small>
+                      </div>
+                    </li>
+                    <li class="mdc-list-item" role="menuitem">
+                      <div class="item-thumbnail">
+                        <img
+                          src="../../../assets/images/faces/face3.jpg"
+                          alt="user"
+                        />
+                      </div>
+                      <div
+                        class="item-content d-flex align-items-start flex-column justify-content-center"
+                      >
+                        <h6 class="item-subject font-weight-normal">
+                          Profile picture updated
+                        </h6>
+                        <small class="text-muted"> 18 Minutes ago </small>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="menu-button-container d-none d-md-block">
+                <button class="mdc-button mdc-menu-button">
+                  <i class="mdi mdi-arrow-down-bold-box"></i>
+                </button>
+                <div class="mdc-menu mdc-menu-surface" tabindex="-1">
+                  <ul
+                    class="mdc-list"
+                    role="menu"
+                    aria-hidden="true"
+                    aria-orientation="vertical"
+                  >
+                    <li class="mdc-list-item" role="menuitem">
+                      <div class="item-thumbnail item-thumbnail-icon-only">
+                        <i class="mdi mdi-lock-outline text-primary"></i>
+                      </div>
+                      <div
+                        class="item-content d-flex align-items-start flex-column justify-content-center"
+                      >
+                        <h6 class="item-subject font-weight-normal">
+                          Lock screen
+                        </h6>
+                      </div>
+                    </li>
+                    <li class="mdc-list-item" role="menuitem">
+                      <div class="item-thumbnail item-thumbnail-icon-only">
+                        <i class="mdi mdi-logout-variant text-primary"></i>
+                      </div>
+                      <div
+                        class="item-content d-flex align-items-start flex-column justify-content-center"
+                      >
+                        <h6 class="item-subject font-weight-normal">Logout</h6>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </header>
+        <div class="container">
+          <div class="row row-cols-3 g-3">
+            <div class="card" style="width: 18rem">
+              <img src="https://images.pexels.com/photos/1251847/pexels-photo-1251847.jpeg?auto=compress&cs=tinysrgb&w=600" class="card-img-top" alt="..." />
+              <div class="card-body">
+                <h5 class="card-title">Bhupendra Jogi</h5>
+                <h6 class="card-subtitle mb-2 text-body-secondary">
+                  Manager
+                </h6>
+                <p class="card-text">
+                  Some quick example text to build on the card title and
+                  make up the bulk of the card's content.
+                </p>
+                <a href="#" class="card-link">View Data</a>
+                <a href="#" class="card-link">Assign Task</a>
+              </div>
+            </div>
+    
+            <div class="card" style="width: 18rem">
+              <img src="https://images.pexels.com/photos/2381069/pexels-photo-2381069.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" class="card-img-top" alt="..." />
+              <div class="card-body">
+                <h5 class="card-title">Xavier</h5>
+                <h6 class="card-subtitle mb-2 text-body-secondary">
+                  Assistant Manager
+                </h6>
+                <p class="card-text">
+                  Some quick example text to build on the card title and
+                  make up the bulk of the card's content.
+                </p>
+                <a href="#" class="card-link">View Data</a>
+                <a href="#" class="card-link">Asiign Task</a>
+              </div>
+            </div>
+
+            <div class="card" style="width: 18rem">
+              <img src="https://images.pexels.com/photos/1181649/pexels-photo-1181649.jpeg?auto=compress&cs=tinysrgb&w=600" class="card-img-top" alt="..." />
+              <div class="card-body">
+                <h5 class="card-title">Mangloo</h5>
+                <h6 class="card-subtitle mb-2 text-body-secondary">
+                  Detective
+                </h6>
+                <p class="card-text">
+                  Some quick example text to build on the card title and
+                  make up the bulk of the card's content.
+                </p>
+                <a href="#" class="card-link">View Data</a>
+                <a href="#" class="card-link">Assign Task</a>
+              </div>
+            </div>
+
+            <div class="card" style="width: 18rem">
+              <img src="https://images.pexels.com/photos/2265488/pexels-photo-2265488.jpeg?auto=compress&cs=tinysrgb&w=600" class="card-img-top" alt="..." />
+              <div class="card-body">
+                <h5 class="card-title">Kamlesh</h5>
+                <h6 class="card-subtitle mb-2 text-body-secondary">
+                  Employee
+                </h6>
+                <p class="card-text">
+                  Some quick example text to build on the card title and
+                  make up the bulk of the card's content.
+                </p>
+                <a href="#" class="card-link">View Data</a>
+                <a href="#" class="card-link">Assign Task</a>
+              </div>
+            </div>
+    
+            <div class="card" style="width: 18rem">
+              <img src="https://images.pexels.com/photos/2505026/pexels-photo-2505026.jpeg?auto=compress&cs=tinysrgb&w=600" class="card-img-top" alt="..." />
+              <div class="card-body">
+                <h5 class="card-title">Boobisha Chodhankar</h5>
+                <h6 class="card-subtitle mb-2 text-body-secondary">
+                  Employee
+                </h6>
+                <p class="card-text">
+                  Some quick example text to build on the card title and
+                  make up the bulk of the card's content.
+                </p>
+                <a href="#" class="card-link">View Data</a>
+                <a href="#" class="card-link">Assign TAsk</a>
+              </div>
+            </div>
+    
+            <div class="card" style="width: 18rem">
+              <img src="https://images.pexels.com/photos/2182974/pexels-photo-2182974.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" class="card-img-top" alt="..." />
+              <div class="card-body">
+                <h5 class="card-title">Jesus Gupta</h5>
+                <h6 class="card-subtitle mb-2 text-body-secondary">
+                  Data Manager
+                </h6>
+                <p class="card-text">
+                  Some quick example text to build on the card title and
+                  make up the bulk of the card's content.
+                </p>
+                <a href="#" class="card-link">View Data</a>
+                <a href="#" class="card-link">Asign Task</a>
+              </div>
+            </div>
+    
+            <div class="card" style="width: 18rem">
+              <img src="https://images.pexels.com/photos/859264/pexels-photo-859264.jpeg?auto=compress&cs=tinysrgb&w=600" class="card-img-top" alt="..." />
+              <div class="card-body">
+                <h5 class="card-title">Sardar Khan</h5>
+                <h6 class="card-subtitle mb-2 text-body-secondary">
+                  Chef
+                </h6>
+                <p class="card-text">
+                  Some quick example text to build on the card title and
+                  make up the bulk of the card's content.
+                </p>
+                <a href="#" class="card-link">View Data</a>
+                <a href="#" class="card-link">Order</a>
+              </div>
+            </div>
+    
+            <div class="card" style="width: 18rem">
+              <img src="https://images.pexels.com/photos/859265/pexels-photo-859265.jpeg?auto=compress&cs=tinysrgb&w=600" class="card-img-top" alt="..." />
+              <div class="card-body">
+                <h5 class="card-title">Jockey garg</h5>
+                <h6 class="card-subtitle mb-2 text-body-secondary">
+                  Chef
+                </h6>
+                <p class="card-text">
+                  Some quick example text to build on the card title and
+                  make up the bulk of the card's content.
+                </p>
+                <a href="#" class="card-link">View Data</a>
+                <a href="#" class="card-link">Order</a>
+              </div>
+            </div>
+    
+          </div>
+        </div>
+      </div>
+    </div>
+
+   
+    <!-- plugins:js -->
+    <script src="../../../assets/vendors/js/vendor.bundle.base.js"></script>
+    <!-- endinject -->
+    <!-- Plugin js for this page-->
+    <!-- End plugin js for this page-->
+    <!-- inject:js -->
+    <script src="../../../assets/js/material.js"></script>
+    <script src="../../../assets/js/misc.js"></script>
+    <!-- endinject -->
+    <!-- Custom js for this page-->
+    <!-- End custom js for this page-->
+  </body>
+</html>
