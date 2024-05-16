@@ -25,9 +25,22 @@
     <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
+    <style>
+      #loginForm {
+   display: none;
+     margin-top: 10px;
+      }
+      #logout{
+        margin-left:20px;
+      }
+    </style>
   </head>
   <body>
-
+    <div id="loginForm">
+      <input type="text" id="username" placeholder="Username">
+      <input type="password" id="password" placeholder="Password">
+      <button onclick="login()">Submit</button>
+    </div>
     <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
 	    <div class="container">
 	      <a class="navbar-brand" href="index.html">SS<span>Hotels</span></a>
@@ -37,12 +50,14 @@
 
 	      <div class="collapse navbar-collapse" id="ftco-nav">
 	        <ul class="navbar-nav ml-auto">
-	          <li class="nav-item active"><a href="index.html" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
 	          <li class="nav-item"><a href="rooms.html" class="nav-link">Our Rooms</a></li>
 	          <li class="nav-item"><a href="restaurant.html" class="nav-link">Restaurant</a></li>
-	          <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
+	          <li class="nav-item active"><a href="about.html" class="nav-link">About Us</a></li>
 	          <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
 	          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+            <li class="nav-item"> <button id="loginButton" onclick="showLoginForm()">Login</button></li>
+            <li class="nav-item"><button id="logout" onclick="logout()">Logout</button></li>
 	        </ul>
 	      </div>
 	    </div>
@@ -294,6 +309,41 @@
   <!-- loader -->
   <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
 
+  <script>
+    function showLoginForm() {
+      document.getElementById("loginForm").style.display = "block";
+      var loginContainer = document.getElementById("loginForm");
+      loginContainer.style.position = "fixed";
+    loginContainer.style.top = "50%";
+    loginContainer.style.left = "50%";
+    loginContainer.style.transform = "translate(-50%, -50%)";
+    loginContainer.style.backgroundColor = "white";
+    loginContainer.style.padding = "20px";
+    loginContainer.style.border = "1px solid #ccc";
+    loginContainer.style.boxShadow = "0px 0px 10px rgba(0, 0, 0, 0.1)";
+    loginContainer.style.zIndex = "9999";
+
+    }
+  
+    function login() {
+      var username = document.getElementById("username").value;
+      var password = document.getElementById("password").value;
+  
+      // Here, you would typically send a request to the server to validate the credentials.
+      // For this example, I'll use a simple condition to check if the username and password match.
+      if (username === "sonu" && password === "1234") {
+        document.getElementById("loginButton").innerHTML = username;
+        document.getElementById("loginForm").style.display = "none";
+      } else {
+        alert("Invalid username or password.");
+      }
+    }
+    function logout() {
+    // Change the innerHTML of the loginButton element
+    document.getElementById("loginButton").innerHTML = "Log In";
+    // You can add more logout functionalities here if needed
+}
+  </script>
 
   <script src="js/jquery.min.js"></script>
   <script src="js/jquery-migrate-3.0.1.min.js"></script>

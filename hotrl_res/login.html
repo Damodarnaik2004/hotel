@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+</head>
+<body>
+    <h1>Login </h1>
+    <form id="loginForm">
+        <input type="text" id="username" placeholder="Username">
+        <input type="password" id="password" placeholder="Password">
+        <button type="submit">Login</button>
+    </form>
+
+    <p id="errorMessage" style="color: red; display: none;">Invalid user</p>
+
+    <script>
+        document.getElementById("loginForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent default form submission
+
+            // Get username and password from input fields
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+
+            // Perform validation (e.g., check username/password against database)
+            // For simplicity, let's assume a hardcoded username/password
+            if (username === "user" && password === "pass") {
+                // Store username in session storage
+                sessionStorage.setItem("username", username);
+                // Redirect to original page
+                window.location.href = "blog-single.html";
+            } else {
+                // If username/password is incorrect, display error message
+                document.getElementById("errorMessage").style.display = "block";
+            }
+        });
+    </script>
+</body>
+</html>
